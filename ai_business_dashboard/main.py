@@ -1,3 +1,4 @@
+
 # main.py
 import dash
 from dash import dcc, html, Input, Output
@@ -126,5 +127,6 @@ def update_charts(category, month, n_clicks):
     return bar_fig, pie_fig
 
 # ---------------- Run App ----------------
-if __name__ == '__main__':
-    app.run_server(debug=True)
+if __name__ == "__main__":
+    app.run_server(debug=False, host='0.0.0.0', port=int(os.environ.get("PORT", 8050)))
+
